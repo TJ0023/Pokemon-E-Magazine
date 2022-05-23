@@ -1,0 +1,157 @@
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 8% repeat(2,1fr) 8%;
+    grid-template-rows: minmax(108px, 10%) minmax(480px,1fr) minmax(480px,1fr) minmax(480px,1fr) minmax(108px, 10%);
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "article article article article"
+    "aside aside aside aside"
+    "footer footer footer footer";
+    background: red;
+    margin: 0;
+}
+
+:root {
+
+}
+/* Dark theme */
+.darkTheme {
+    --primary-color: # black;
+    --secondary-color: white;
+}
+/* Dark theme */
+
+.main {
+    display: grid;
+    place-items: center;
+}
+
+.header {
+    grid-area: header;
+
+    background: rgb(204, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+    place-items: center;
+}
+
+.header-icon img{
+    height: 3.5em ;
+    width: 3.5em;
+}
+
+.header-title {
+    display: grid;
+    place-items: center;
+}
+
+.main {
+    grid-area: main;
+}
+
+.article {
+    grid-area: article;
+    background:lightcoral;
+}
+
+.aside {
+    grid-area: aside;
+    background:lightgreen;
+}
+
+.footer {
+    grid-area: footer;
+    background: rgb(204, 0, 0);
+}
+
+.footer ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    gap: 2em;
+    padding: 1em;
+    list-style-type: none;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+/*
+        input[type=checkbox] {
+        display:none;
+        }
+
+label {
+    display: grid;
+    place-items: center;
+}
+
+input[type=checkbox] + label {
+    margin: 0;
+    background:url("PBR.svg") no-repeat center;
+    height: 120px;
+    width: 120px;;
+    background-size: 100%;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+    background:url("UBYB.svg") no-repeat center;
+    height: 120px;
+    width: 120px;
+    background-size: 100%;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+*/
+input[type=checkbox] {
+    display:none;
+}
+
+label {
+display: grid;
+place-items: center;
+}
+
+input[type=checkbox]:hover + label{
+    transform: scale(1.2);
+    }
+
+input[type=checkbox] + label {
+height: 80px;
+width: 120px;
+background: no-repeat center / contain url(images/PBR.svg);
+transition: all 0.1s;
+cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+background: no-repeat center / contain url(images/UBYB.svg);
+height: 80px;
+width: 120px;
+transition: all 0.2s;
+cursor: pointer;
+}
+
+.UBYB {
+background: no-repeat center / contain url(images/UBYB.svg);
+height: 80px;
+width: 120px;
+transition: all 0.2s;
+cursor: pointer;
+}
