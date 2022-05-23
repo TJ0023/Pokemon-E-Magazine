@@ -1,8 +1,58 @@
 *, *::before, *::after {
     box-sizing:border-box;
+    transition: all 0.5s ease;
 }
 
+/* dark mode */
+:root {
+    --header: rgb(167, 0, 0);
+    --main: rgb(255, 0, 0);
+    --aside: rgb(21, 148, 106);
+    --article: rgb(255, 196, 0);
+    --pokeball: url(images/pokeballpx.png);
+}
+
+.pokeball {
+    background-image: var(--pokeball);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3em;
+    height: 3em;
+}
+.dark {
+    --header: rgb(83, 83, 83);
+    --main: rgb(32, 32, 32);
+    --aside: rgb(32, 32, 32);
+    --article: rgb(255, 196, 0);
+    --pokeball: url(images/ultraballpx.png);
+
+}
+/* dark mode */
+html {
+    overflow: auto;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 0.5em;
+    transition: all 1s ease;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: var(--main);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--header); 
+    transition: all 1s ease;
+}
 body {
+    overflow-y: scroll;
     margin: 0 auto;
     padding: 0 auto;
     color: white;
@@ -22,16 +72,6 @@ body {
     margin: 0;
 }
 
-:root {
-
-}
-/* Dark theme */
-.darkTheme {
-    --primary-color: # black;
-    --secondary-color: white;
-}
-/* Dark theme */
-
 .main {
     display: grid;
     place-items: center;
@@ -39,8 +79,7 @@ body {
 
 .header {
     grid-area: header;
-
-    background: rgb(204, 0, 0);
+    background: var(--header);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1em;
@@ -59,21 +98,22 @@ body {
 
 .main {
     grid-area: main;
+    background-color: var(--main);
 }
 
 .article {
     grid-area: article;
-    background:lightcoral;
+    background: var(--article);
 }
 
 .aside {
     grid-area: aside;
-    background:lightgreen;
+    background:var(--aside);
 }
 
 .footer {
     grid-area: footer;
-    background: rgb(204, 0, 0);
+    background: var(--header);
 }
 
 .footer ul {
@@ -89,6 +129,7 @@ body {
     color: white;
     text-decoration: none;
 }
+
 /*
         input[type=checkbox] {
         display:none;
@@ -130,13 +171,13 @@ place-items: center;
 
 input[type=checkbox]:hover + label{
     transform: scale(1.2);
-    }
+}
 
 input[type=checkbox] + label {
 height: 80px;
 width: 120px;
 background: no-repeat center / contain url(images/PBR.svg);
-transition: all 0.1s;
+transition: all 0.3s ease;
 cursor: pointer;
 }
 
@@ -144,7 +185,7 @@ input[type=checkbox]:checked + label {
 background: no-repeat center / contain url(images/UBYB.svg);
 height: 80px;
 width: 120px;
-transition: all 0.2s;
+transition: all 0.3s ease;
 cursor: pointer;
 }
 
@@ -152,6 +193,6 @@ cursor: pointer;
 background: no-repeat center / contain url(images/UBYB.svg);
 height: 80px;
 width: 120px;
-transition: all 0.2s;
+transition: all 0.3s ease;
 cursor: pointer;
 }
