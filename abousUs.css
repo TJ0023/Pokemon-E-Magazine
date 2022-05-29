@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: 'LemonMilkMedium';
-    src:url(/fonts/LEMONMILK-Medium.otf);
+    src:url(fonts/LEMONMILK-Medium.otf);
 }
 
 @font-face {
     font-family: 'PokémonSolid';
-    src:url(/fonts/PokemonSolid.ttf) format('truetype');
+    src:url(fonts/PokemonSolid.ttf) format('truetype');
 }
 /*Custom Fonts*/
 html {
@@ -23,26 +23,26 @@ html {
     --scroll: red;
     --header: rgb(167, 0, 0);
     --shadow: rgb(207, 159, 0);
-    --pokeball: url(/sprites/voltorb.gif);
-    --bgmainSVG: url(/wallpapers/faq-light.svg);
-    --articleSVG: url(/wallpapers/article-light.svg);
-    --asideSVG: url(/wallpapers/aside-light.svg);
+    --pokeball: url(sprites/voltorb.gif);
+    --bgmainSVG: url(wallpapers/faq-light.svg);
+    --articleSVG: url(wallpapers/article-light.svg);
+    --asideSVG: url(wallpapers/aside-light.svg);
     --faq: rgba(255, 153, 0, 0.849);
     --faqPanel: rgba(255, 115, 0, 0.603);
-    --asideCircle: url(/wallpapers/guideAside-light.svg);
+    --asideCircle: url(wallpapers/guideAside-light.svg);
 }
 
 .dark {
     --scroll: black;
     --header: rgb(83, 83, 83);
     --shadow: rgb(0, 140, 255);
-    --pokeball: url(/sprites/pikachu.gif);
-    --bgmainSVG: url(/wallpapers/faq-dark.svg);
-    --articleSVG: url(/wallpapers/article-dark.svg);
-    --asideSVG: url(/wallpapers/aside-dark.svg);
+    --pokeball: url(sprites/pikachu.gif);
+    --bgmainSVG: url(wallpapers/faq-dark.svg);
+    --articleSVG: url(wallpapers/article-dark.svg);
+    --asideSVG: url(wallpapers/aside-dark.svg);
     --faq: rgba(0, 113, 117, 0.637);
     --faqPanel: rgb(3, 89, 92);
-    --asideCircle: url(/wallpapers/guideAside-dark.svg);
+    --asideCircle: url(wallpapers/guideAside-dark.svg);
 }
 
 .togglebar {
@@ -59,7 +59,7 @@ html {
     }
     
     input[type=checkbox] + .togglebar {
-    background: no-repeat center / contain url(/images/PBR.svg);
+    background: no-repeat center / contain url(images/PBR.svg);
     height: 3em;
     width: 5em;
     padding-left:1em;
@@ -68,7 +68,7 @@ html {
     }
     
     input[type=checkbox]:checked + .togglebar {
-    background: no-repeat center / contain url(/images/UBYB.svg);
+    background: no-repeat center / contain url(images/UBYB.svg);
     height: 3em;
     width: 5em;
     padding-left:1em;
@@ -77,7 +77,7 @@ html {
     }
     
     .UBYB {
-    background: no-repeat center / contain url(/images/UBYB.svg);
+    background: no-repeat center / contain url(images/UBYB.svg);
     height: 80px;
     width: 120px;
     transition: all 0.3s ease;
@@ -252,7 +252,7 @@ body {
     height: 2.5em;
     width: 2.5em;
     cursor: pointer;
-    background:no-repeat center / contain url("/images/menu.png");
+    background:no-repeat center / contain url("images/menu.png");
 }
 
 .slide-nav {
@@ -281,7 +281,7 @@ body {
 
 .slideClosebtn {
     display: block;
-    background:no-repeat center / contain url("/images/cancel.png");
+    background:no-repeat center / contain url("images/cancel.png");
     position: absolute;
     top: 0;
     right: 10%;

@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: 'LemonMilkMedium';
-    src:url(/fonts/LEMONMILK-Medium.otf);
+    src:url(fonts/LEMONMILK-Medium.otf);
 }
 
 @font-face {
     font-family: 'PokémonSolid';
-    src:url(/fonts/PokemonSolid.ttf) format('truetype');
+    src:url(fonts/PokemonSolid.ttf) format('truetype');
 }
 /*Custom Fonts*/
 html {
@@ -23,10 +23,10 @@ html {
     --scroll: red;
     --header: rgb(167, 0, 0);
     --shadow: rgb(207, 159, 0);
-    --pokeball: url(/sprites/voltorb.gif);
-    --bgmainSVG: url(/wallpapers/main-light.svg);
-    --articleSVG: url(/wallpapers/article-light.svg);
-    --asideSVG: url(/wallpapers/aside-light.svg);
+    --pokeball: url(sprites/voltorb.gif);
+    --bgmainSVG: url(wallpapers/main-light.svg);
+    --articleSVG: url(wallpapers/article-light.svg);
+    --asideSVG: url(wallpapers/aside-light.svg);
     --borderlight: linear-gradient(to right, #ff9d4d, #ffc400);
     --borderlight2: linear-gradient(to right, #77ff4d, #00ff95);
     --borderlight3: linear-gradient(to right, #58ffe9, #000f97);
@@ -38,10 +38,10 @@ html {
     --scroll: black;
     --header: rgb(83, 83, 83);
     --shadow: rgb(0, 140, 255);
-    --pokeball: url(/sprites/pikachu.gif);
-    --bgmainSVG: url(/wallpapers/main-dark.svg);
-    --articleSVG: url(/wallpapers/article-dark.svg);
-    --asideSVG: url(/wallpapers/aside-dark.svg);
+    --pokeball: url(sprites/pikachu.gif);
+    --bgmainSVG: url(wallpapers/main-dark.svg);
+    --articleSVG: url(wallpapers/article-dark.svg);
+    --asideSVG: url(wallpapers/aside-dark.svg);
     --borderlight: linear-gradient(to right, #ff4db5, #6a0174);
     --borderlight2: linear-gradient(to right, #027c49, #99ff46);
     --borderlight3: linear-gradient(to right, #070049, #49a7ff);
@@ -62,7 +62,7 @@ html {
     }
     
     input[type=checkbox] + .togglebar {
-    background: no-repeat center / contain url(/images/PBR.svg);
+    background: no-repeat center / contain url(images/PBR.svg);
     height: 3em;
     width: 5em;
     padding-left:1em;
@@ -71,7 +71,7 @@ html {
     }
     
     input[type=checkbox]:checked + .togglebar {
-    background: no-repeat center / contain url(/images/UBYB.svg);
+    background: no-repeat center / contain url(images/UBYB.svg);
     height: 3em;
     width: 5em;
     padding-left:1em;
@@ -80,7 +80,7 @@ html {
     }
     
     .UBYB {
-    background: no-repeat center / contain url(/images/UBYB.svg);
+    background: no-repeat center / contain url(images/UBYB.svg);
     height: 80px;
     width: 120px;
     transition: all 0.3s ease;
@@ -125,7 +125,7 @@ html {
    right: -0.4em;
    top: 50%;
    cursor:pointer;
-   background-image: url(/pokemonArt/t-closedPokedex.png);
+   background-image: url(pokemonArt/t-closedPokedex.png);
    background-repeat: no-repeat;
    background-size: contain;
    background-position: center;;
@@ -324,9 +324,9 @@ body {
     cursor: pointer;
 }
 
-#trainer1 {background: no-repeat center / contain url(/pokemonArt/3D-Cynthia.png);}
-#trainer2 {background: no-repeat center / contain url(/pokemonArt/3D-N.png);}
-#trainer3 {background: no-repeat center / contain url(/pokemonArt/3D-brock.png);}
+#trainer1 {background: no-repeat center / contain url(pokemonArt/3D-Cynthia.png);}
+#trainer2 {background: no-repeat center / contain url(pokemonArt/3D-N.png);}
+#trainer3 {background: no-repeat center / contain url(pokemonArt/3D-brock.png);}
 
 .mudkip:hover {transform: scale(1.3)}
 
@@ -349,42 +349,42 @@ input[type='checkbox']{display: none;}
     transition: all 250ms ease-in;
 }
 .pikachu {
-    background: no-repeat center / contain url(/pokemonSprites/pikachu-kantocap.gif);
+    background: no-repeat center / contain url(pokemonSprites/pikachu-kantocap.gif);
     width: 100px;
     height: 100px;
 }
 .charizard {
-    background: no-repeat center / contain url(/pokemonSprites/mega-charizard-y.gif);
+    background: no-repeat center / contain url(pokemonSprites/mega-charizard-y.gif);
     width: 200px;
     height: 200px;
 }
 .garchomp {
-    background: no-repeat center / contain url(/pokemonSprites/garchomp.gif);
+    background: no-repeat center / contain url(pokemonSprites/garchomp.gif);
     width: 150px;
     height: 200px;
 }
 .milotic {
-    background: no-repeat center / contain url(/pokemonSprites/milotic.gif);
+    background: no-repeat center / contain url(pokemonSprites/milotic.gif);
     width: 150px;
     height: 200px;
 }
 .reshiram {
-    background: no-repeat center / contain url(/pokemonSprites/reshiram.gif);
+    background: no-repeat center / contain url(pokemonSprites/reshiram.gif);
     width: 175px;
     height: 200px;
 }
 .vanilluxe {
-    background: no-repeat center / contain url(/pokemonSprites/vanilluxe.gif);
+    background: no-repeat center / contain url(pokemonSprites/vanilluxe.gif);
     width: 100px;
     height: 200px;
 }
 .tyranitar {
-    background: no-repeat center / contain url(/pokemonSprites/tyranitar.gif);
+    background: no-repeat center / contain url(pokemonSprites/tyranitar.gif);
     width: 100px;
     height: 200px;
 }
 .steelix {
-    background: no-repeat center / contain url(/pokemonSprites/steelix.gif);
+    background: no-repeat center / contain url(pokemonSprites/steelix.gif);
     width: 100px;
     height: 200px;
 }
@@ -493,7 +493,7 @@ aside img:hover {
     height: 2.5em;
     width: 2.5em;
     cursor: pointer;
-    background:no-repeat center / contain url("/images/menu.png");
+    background:no-repeat center / contain url("images/menu.png");
 }
 
 .slide-nav {
@@ -522,7 +522,7 @@ aside img:hover {
 
 .slideClosebtn {
     display: block;
-    background:no-repeat center / contain url("/images/cancel.png");
+    background:no-repeat center / contain url("images/cancel.png");
     position: absolute;
     top: 0;
     right: 10%;
