@@ -4,50 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PokéStar!</title>
+    <link rel="stylesheet" href="styletest.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="icon" href="pokemonArt/webPokeball.ico" type="image/gif" sizes="16x16">
 </head>
 <body>
+
+    <!-- Right Side Sticky Page Navigation Menu-->
+    <nav class="pokeNavHead">
+
+        <input type="checkbox" href="#" class="pokeNav" name="pokeNav" id="pokeNav"/>
+        <label class="pokeNavbutton" for="pokeNav" id="pokeNavbutton">
+        </label>
+
+        <a href="#main" class="pokeNavItem icon1" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem1"></a>
+        <a href="#article" class="pokeNavItem2 icon2" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem2"></a>
+        <a href="#aside" class="pokeNavItem3 icon3" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem3"></a>
+
+       </nav>
+    <!-- Right Side Sticky Page Navigation Menu-->
+
+    <header class="header" id="header1">
+        <div class="header-icon">   
+            <label class="header-logo"></label>
+        </div>
+        <div class="header-title size">
+        <h1>PokéStar!</h1>
+        </div>
+
+    <!-- Sliding Nav Menu-->
+        <div class="container" id="menu">
     
-        <header class="header" id="header">
-            <div class="header-icon">
-               <label class="pokeball">
-            </div>
-            <div class="header-title">
-            <h1>HELLO!</h1>
-            </div>
+            <div class="slideHeader">
+                <nav class="slideNav">
+                    <label class="slideMenu" onclick="openSlide()"></label>
+                </nav>
+            
+                    <div class="slide-nav" id="slide-menu">
+                        <label class="slideClosebtn"  onclick="closeSlide()"></label>
+                        <a href="index.html">HOME</a>
+                        <a href="guides.html">GUIDES</a>
+                        <a href="trainers.html">TRAINERS</a>
+                        <a href="aboutUs.html">ABOUT US</a>
+                        <div class="slideToggle">
+                        <input type="checkbox" name="pokeBar" id="check" value="">
+                        <label class="togglebar" for="check" onclick="toggle()"></label>
+                        </div>
+        </div>
+    
         </header>
-
-
+       
         <main class="main" id="main">
-                <div>
-                    <input type="checkbox" name="pokeBar" id="check" value="">
-                    <label for="check" onclick="toggle()"></label>
-                </div>
+    
+            <div class="mainPic">
+                <ul class="promoText">
+                    <li><h1>SUBSCRIBE</h1></li>
+                    <li><h2>FOR ONLY</h2> <h1 style="text-decoration: underline;">₽100</h1></li>
+                    <li><h2>A MONTH!</h2></li>
+                </ul>
+                <img src="pokemonArt/SeaDash.png" style="width:40%; height: auto;">
+            </div>
+            
         </main>
 
 
         <article class="article" id="article">
-
+            <div class="articlePic">
+                <img src="pokemonArt/t-secretBase.png" style="width:54%; height: auto;">
+                <ul class="promoText">
+                    <li><h1>LEARN THEIR STORIES,</h1></li>
+                    <li><h2>SHARE YOURS,</h2></li>
+                    <li><h2>AND GROW TOGETHER!</h2></li>
+                    <li><a href="#aside" class="articleBtn" style=" text-shadow:0px 0px;">START NOW!</a></li>
+                </ul>
+    
+            </div>
         </article>
 
 
         <aside class="aside" id="aside">
+            <div class="asideForm">
+                <P>TRY OUT A MONTH FOR FREE!</P>
+                <img src="pokemonArt/t-charidezard.png" style="width:40%; height: auto;">
+          
+                <form action="index.html">
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="Enter First Name" name="fname" required>
 
+                    <label for="email"><b>Email Address</b></label>
+                     <input type="email" placeholder="Enter Email" name="password" required>
+                     <input type="submit" value="SUBSCRIBE" class="subscribeB">
+                    </form>
+            </div>
         </aside>
 
+        <div class="freeArticle">
+            <div class="freeAHeader"> <h1>Read Some Free Articles! <img src="/pokemonArt/pikaThumb.png" width="50px;"></h1> </div>
+        <div class="pokeTabs">
+            <div class="pokeTab">
+               <input type="checkbox" id="chck1">
+               <label class="pokeLabel" for="chck1"><img src="pokemonArt/selene.png" style="width:45%; height: auto; border-radius: 0.5em;">
+                Must Visit Places in Alola with your Pokémon!<br>
+                </label>
+               <div class="pokeContent">
+                   By: Selene
+                <br><br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus nostrum ullam hic tempora, unde aliquam laboriosam voluptate expedita possimus?
+              <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla ratione labore amet qui, perspiciatis id ex dolores placeat! Doloribus sint cupiditate consequuntur labore dignissimos. Dolore molestiae nulla quis ipsam nihil maiores aperiam rem commodi? Nemo porro exercitationem libero nobis vero assumenda, nesciunt deleniti odit beatae pariatur praesentium repellendus eaque?
+              <br><br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum optio numquam modi illo, omnis impedit quo. Adipisci animi repellat deserunt voluptate perspiciatis dolorem quod!
+               </div>
+            </div>
+            <div class="pokeTab">
+                <input type="checkbox" id="chck2">
+                <label class="pokeLabel" for="chck2"><img src="pokemonArt/hitmontop.jpg" style="width:50%; height: auto; border-radius: 0.5em;">
+                    Use Fighting Moves Effectively!</label>
+                <div class="pokeContent">
+                By: Bea
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus nostrum ullam hic tempora, unde aliquam laboriosam voluptate expedita possimus?
+                    <br> <br>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rerum optio numquam modi illo, omnis impedit quo. Adipisci animi repellat deserunt voluptate perspiciatis dolorem quod!
+                </div>
+             </div>
+            
+        </div>
+        </div>
 
-        <footer class="footer" id="footer"> 
+
+        <footer class="footer" id="footer1"> 
             <ul>
-                <li><a href="#">Button</a></li>
-                <li><a href="#">Button</a></li>
-                <li><a href="#">Button</a></li>
+                <li><a href="https://www.facebook.com/TwentyThreeTeiji/"><img src="/images/facebook.svg" width:40px;></a></li>
+                <li><a href="https://github.com/TJ0023"><img src="/images/github.svg" width:40px;></a></li>
             </ul>
         </footer>
 
-    <div class="anchor"></div>
-
-
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

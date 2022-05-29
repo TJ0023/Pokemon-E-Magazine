@@ -2,57 +2,183 @@
     box-sizing:border-box;
     transition: all 0.5s ease;
 }
+/*Custom Fonts*/
 
+@font-face {
+    font-family: 'LemonMilkMedium';
+    src:url(fonts/LEMONMILK-Medium.otf);
+}
+
+@font-face {
+    font-family: 'PokemonSolid';
+    src:url(fonts/PokemonSolid.ttf) format('truetype');
+}
+/*Custom Fonts*/
+html {
+    overflow: auto;
+    scroll-behavior: smooth;
+}
 /* dark mode */
 :root {
     --header: rgb(167, 0, 0);
     --main: rgb(255, 0, 0);
     --aside: rgb(21, 148, 106);
     --article: rgb(255, 196, 0);
-    --pokeball: url(images/pokeballpx.png);
+    --shadow: rgb(207, 159, 0);
+    --pokeball: url(sprites/voltorb.gif);
 }
 
-.pokeball {
-    background-image: var(--pokeball);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 3em;
-    height: 3em;
-}
 .dark {
     --header: rgb(83, 83, 83);
     --main: rgb(32, 32, 32);
     --aside: rgb(32, 32, 32);
     --article: rgb(255, 196, 0);
-    --pokeball: url(images/ultraballpx.png);
+    --shadow: rgb(0, 140, 255);
+    --pokeball: url(sprites/pikachu.gif);
 
 }
+
+.togglebar {
+    display: grid;
+    place-items: center;
+    }
+    
+    input[type=checkbox] {
+        display:none;
+    }
+
+    input[type=checkbox]:hover + .togglebar{
+        transform: scale(1.2);
+    }
+    
+    input[type=checkbox] + .togglebar {
+    height: 3em;
+    width: 5em;
+    background: no-repeat center / contain url(images/PBR.svg);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+    
+    input[type=checkbox]:checked + .togglebar {
+    background: no-repeat center / contain url(images/UBYB.svg);
+    height: 3em;
+    width: 5em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+    
+    .UBYB {
+    background: no-repeat center / contain url(images/UBYB.svg);
+    height: 80px;
+    width: 120px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+    
 /* dark mode */
-html {
-    overflow: auto;
-}
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 0.5em;
-    transition: all 1s ease;
 }
  
 ::-webkit-scrollbar-track {
     background-color: var(--main);
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    transition: all 1s ease;
 }
 
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: var(--header); 
-    transition: all 1s ease;
 }
+
+
+/* Pokemon SideBar Anchor Nav */
+.pokeNavHead {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    padding: 0.25em;
+ }
+
+ .pokeNav {
+    display: none;
+ }
+
+ .pokeNavbutton {
+   width: 6.5em;
+   height: 6.5em;
+   position: fixed;
+   right: -0.4em;
+   top: 50%;
+   cursor:pointer;
+   background: no-repeat center / contain url(images/pokeDex.png);
+   transition: transform 200ms ease-in-out;
+   z-index: 2;
+ }
+
+ .pokeNavbutton:hover {
+    transform: scale(1.3);
+ }
+
+ .pokeNav:checked + .pokeNavbutton {
+    transform: scale(0.5);
+ }
+
+ .pokeNav:checked ~ .pokeNavItem{
+    transition-duration: 300ms;
+    transform: translateY(-12em);
+ }
+
+ .pokeNav:checked ~ .pokeNavItem2{
+    transition-duration: 300ms;
+    transform: translateY(-7.5em);
+ }
+
+ .pokeNav:checked ~ .pokeNavItem3{
+    transition-duration: 300ms;
+    transform: translateY(-3em);
+ }
+
+ .pokeNavHead img{
+     height: 2.5em;
+     width: 2.5em;
+     position: relative;
+    transition-duration: all 100ms ease;   
+ }
+
+ .icon1 {  
+    position: fixed;
+    right: 1.5em;
+    top:53%;
+    padding-right: 0.2em;
+}
+ .pokeNavHead img:hover{
+    transform: scale(1.3);
+}
+
+ .icon2 {
+    position: fixed;
+   right: 1.5em;
+   top:53%;
+   padding-right: 0.2em;
+ }
+
+ .icon3 {
+    position: fixed;
+    right: 1.5em;
+    top:53%;
+    padding-right: 0.2em;
+ }
+
+
+ /* Pokemon SideBar Anchor Nav */
+
+
+
 body {
-    overflow-y: scroll;
     margin: 0 auto;
     padding: 0 auto;
     color: white;
@@ -68,13 +194,7 @@ body {
     "article article article article"
     "aside aside aside aside"
     "footer footer footer footer";
-    background: red;
-    margin: 0;
-}
-
-.main {
-    display: grid;
-    place-items: center;
+    background: var(--main);
 }
 
 .header {
@@ -82,23 +202,32 @@ body {
     background: var(--header);
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 1em;
+    grid-gap: 1.5em;
     place-items: center;
 }
 
-.header-icon img{
-    height: 3.5em ;
-    width: 3.5em;
+.header-logo {
+    display: grid;
+    background: var(--pokeball);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4em;
+    height: 4em;
 }
 
+/* Pokemon Solid for classic look */
 .header-title {
     display: grid;
-    place-items: center;
+    font-family: "PokemonSolid";
+    letter-spacing: 0.5em;
+    text-shadow: 0.25em 0.25em var(--shadow);  
 }
-
+/* Pokemon Solid for classic look */
 .main {
     grid-area: main;
     background-color: var(--main);
+    display: grid;
+    place-items: center;
 }
 
 .article {
@@ -130,69 +259,6 @@ body {
     text-decoration: none;
 }
 
-/*
-        input[type=checkbox] {
-        display:none;
-        }
 
-label {
-    display: grid;
-    place-items: center;
-}
 
-input[type=checkbox] + label {
-    margin: 0;
-    background:url("PBR.svg") no-repeat center;
-    height: 120px;
-    width: 120px;;
-    background-size: 100%;
-    transition: all 0.1s;
-    cursor: pointer;
-}
 
-input[type=checkbox]:checked + label {
-    background:url("UBYB.svg") no-repeat center;
-    height: 120px;
-    width: 120px;
-    background-size: 100%;
-    transition: all 0.2s;
-    cursor: pointer;
-}
-
-*/
-input[type=checkbox] {
-    display:none;
-}
-
-label {
-display: grid;
-place-items: center;
-}
-
-input[type=checkbox]:hover + label{
-    transform: scale(1.2);
-}
-
-input[type=checkbox] + label {
-height: 80px;
-width: 120px;
-background: no-repeat center / contain url(images/PBR.svg);
-transition: all 0.3s ease;
-cursor: pointer;
-}
-
-input[type=checkbox]:checked + label {
-background: no-repeat center / contain url(images/UBYB.svg);
-height: 80px;
-width: 120px;
-transition: all 0.3s ease;
-cursor: pointer;
-}
-
-.UBYB {
-background: no-repeat center / contain url(images/UBYB.svg);
-height: 80px;
-width: 120px;
-transition: all 0.3s ease;
-cursor: pointer;
-}
