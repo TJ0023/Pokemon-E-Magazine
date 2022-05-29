@@ -1,0 +1,302 @@
+*, *::before, *::after {
+    box-sizing:border-box;
+    transition: all 0.5s ease;
+}
+/*Custom Fonts*/
+
+@font-face {
+    font-family: 'LemonMilkMedium';
+    src:url(/fonts/LEMONMILK-Medium.otf);
+}
+
+@font-face {
+    font-family: 'PokémonSolid';
+    src:url(/fonts/PokemonSolid.ttf) format('truetype');
+}
+/*Custom Fonts*/
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/* dark mode */
+:root {
+    --scroll: red;
+    --header: rgb(167, 0, 0);
+    --shadow: rgb(207, 159, 0);
+    --pokeball: url(/sprites/voltorb.gif);
+    --bgmainSVG: url(/wallpapers/faq-light.svg);
+    --articleSVG: url(/wallpapers/article-light.svg);
+    --asideSVG: url(/wallpapers/aside-light.svg);
+    --faq: rgba(255, 153, 0, 0.849);
+    --faqPanel: rgba(255, 115, 0, 0.603);
+    --asideCircle: url(/wallpapers/guideAside-light.svg);
+}
+
+.dark {
+    --scroll: black;
+    --header: rgb(83, 83, 83);
+    --shadow: rgb(0, 140, 255);
+    --pokeball: url(/sprites/pikachu.gif);
+    --bgmainSVG: url(/wallpapers/faq-dark.svg);
+    --articleSVG: url(/wallpapers/article-dark.svg);
+    --asideSVG: url(/wallpapers/aside-dark.svg);
+    --faq: rgba(0, 113, 117, 0.637);
+    --faqPanel: rgb(3, 89, 92);
+    --asideCircle: url(/wallpapers/guideAside-dark.svg);
+}
+
+.togglebar {
+    display: grid;
+    place-items: center;
+    }
+    
+    input[type=checkbox] {
+        display:none;
+    }
+
+    input[type=checkbox]:hover + .togglebar{
+        transform: scale(1.2);
+    }
+    
+    input[type=checkbox] + .togglebar {
+    background: no-repeat center / contain url(/images/PBR.svg);
+    height: 3em;
+    width: 5em;
+    padding-left:1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+    
+    input[type=checkbox]:checked + .togglebar {
+    background: no-repeat center / contain url(/images/UBYB.svg);
+    height: 3em;
+    width: 5em;
+    padding-left:1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+    
+    .UBYB {
+    background: no-repeat center / contain url(/images/UBYB.svg);
+    height: 80px;
+    width: 120px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+    
+/* dark mode */
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: var(--scroll);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--header); 
+}
+
+
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 8% repeat(2,1fr) 8%;
+    grid-template-rows: minmax(64px,5%) auto minmax(64px, 5%);
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+    background: var(--header);
+}
+
+.header {
+    grid-area: header;
+    background: var(--header);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-gap: 1.5em;
+    place-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+.header-logo {
+    display: grid;
+    background: var(--pokeball);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3em;
+    height: 3em;
+}
+
+/* header title is small to avoid increasing header size */
+.header-title {
+    display: grid;
+    font-family: "LemonMilkMedium";
+    letter-spacing: 0.75em;
+    font-size: 0.75em;
+    text-shadow: 0.25em 0.25em var(--shadow);  
+}
+
+.main {
+    grid-area: main;
+    background: var(--bgmainSVG);
+    background-size: cover;
+}
+
+.mainPic {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--faq);
+    border-radius: 0.5em;
+    margin: 2em 1em 2em 1em;
+    font-size: 2.5vmin;
+    padding: 0;
+}
+
+.mainPic hr {
+    display: flex;
+    width: 80%;
+    background: white;
+    height: 0.25em;
+    border-radius: 0.25em;
+    text-align: left;
+}
+.mainText {
+    font-size: 1.5em;
+    margin: 1em 1em 2em 1em;
+   
+}
+
+.mainText img {
+    width: 4em;
+    justify-content: center;
+    align-items: center;
+}
+
+.pikachu:hover {
+    transform: scale(1.5);
+}
+
+.mainText2 {
+    padding: 0em 0em 2em 0em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainText2 img {
+    width: 75%;
+    border-radius: 0.5em;
+}
+.subText {
+    margin-top: 1em;
+}
+.subText span {
+    font-size: 5vmin;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
+    user-select: none;
+}
+
+.footer {
+    grid-area: footer;
+    background: var(--header);
+    background-size: auto;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    gap: 2em;
+    padding: 0.5em;
+    list-style-type: none;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*navbar side*/
+.slideNav {
+    display: flex;
+    margin: 0.5em;
+}
+
+.slideMenu {
+    display: flex;
+    height: 2.5em;
+    width: 2.5em;
+    cursor: pointer;
+    background:no-repeat center / contain url("/images/menu.png");
+}
+
+.slide-nav {
+    height: 100vh;
+    width: 0vw;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    background: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: all 150ms ease-in;
+}
+
+.slide-nav a {
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 2em 0 2em 1em;
+    margin-top: 2em;
+}
+
+.slideClosebtn {
+    display: block;
+    background:no-repeat center / contain url("/images/cancel.png");
+    position: absolute;
+    top: 0;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+.slideToggle {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+/*navbar side*/
+

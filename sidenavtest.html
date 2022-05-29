@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0.5em;
+    }
+    
+    .menu {
+        display: inline-block;
+        height: 2.5em;
+        width: 2.5em;
+        cursor: pointer;
+        background:no-repeat center / contain url("images/menu.png");
+    }
+    
+    .side-nav {
+        height:100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: #111;
+        opacity: 0.9;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: all 300ms ease-in;
+    }
+    
+    .side-nav a {
+        color: white;
+        display: block;
+        text-align: justify;
+        text-decoration: none;
+        font-size: 2.5em;
+        padding: 2em;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: -22%;
+        font-size: 3em;
+        padding: 1em;
+    }
+
+    #main {
+        transition: all 300ms ease;
+    }
+
+</style>
+<body>
+    <nav class="nav">
+        <label class="menu" onclick="openSlide()"></label>
+    </nav>
+    
+    <div class="side-nav" id="side-menu">
+        <a href="" onclick='closeSlide()' class="closebtn">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Guides</a>
+        <a href="#">Testimonies</a>
+    </div>
+
+    <div id="main" class="main">
+        <h1>Responsive Side Menu</h1>
+    </div>
+
+    <script>
+        let x = document.getElementById("pikachuCry"); 
+        let y = document.getElementById("charizardCry");
+        function playPikachu() { 
+            x.play(); 
+            x.volume = 0.25;
+        } 
+
+        function playCharizard() { 
+            y.play(); 
+            y.volume = 0.25;
+        } 
+
+        function openSlide(){
+        document.getElementById('side-menu').style.width = '7em';
+        document.getElementsByClassName('main').style.filter =  "blur(8px)";
+
+        }
+
+        function closeSlide(){
+        document.getElementById('side-nav').style.width = '0em';
+        document.getElementsByClassName('main').style.filter =  "blur(0px)";
+        }
+    </script>
+</body>
+</html>

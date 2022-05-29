@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIDES</title>
+    <link rel="stylesheet" href="/css/guides.css">
+    <link rel="icon" href="pokemonArt/webPokeball.ico" type="image/gif" sizes="16x16">
+</head>
+<body>
+
+    <!-- Right Side Sticky Page Navigation Menu-->
+    <nav class="pokeNavHead">
+
+        <input type="checkbox" href="#" class="pokeNav" name="pokeNav" id="pokeNav"/>
+        <label class="pokeNavbutton" for="pokeNav" id="pokeNavbutton">
+        </label>
+
+        <a href="#main" class="pokeNavItem icon1" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem1"></a>
+        <a href="#aside" class="pokeNavItem2 icon2" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem2"></a>
+       </nav>
+    <!-- Right Side Sticky Page Navigation Menu-->
+
+    <header class="header" id="header1">
+        <div class="header-icon">   
+            <label class="header-logo"></label>
+        </div>
+        <div class="header-title size">
+        <h1>PokéStar!</h1>
+        </div>
+
+    <!-- Sliding Nav Menu-->
+        <div class="container" id="menu">
+    
+            <div class="slideHeader">
+                <nav class="slideNav">
+                    <label class="slideMenu" onclick="openSlide()"></label>
+                </nav>
+            
+                    <div class="slide-nav" id="slide-menu">
+                        <label class="slideClosebtn"  onclick="closeSlide()"></label>
+                        <a href="index.html">HOME</a>
+                        <a href="guides.html">GUIDES</a>
+                        <a href="trainers.html">TRAINERS</a>
+                        <a href="aboutUs.html">ABOUT US</a>
+                        <div class="slideToggle">
+                        <input type="checkbox" name="pokeBar" id="check" value="">
+                        <label class="togglebar" for="check" onclick="toggle()"></label>
+                        </div>
+        </div>
+    
+        </header>
+       
+        <main class="main" id="main">
+            <div class="mainPic">
+                <div class="mainImg">
+                <h2>STARTING GUIDES FOR TRAINERS <img src="/pokemonArt/mudThink.png" width="50px;"></h2>
+                <img src="/pokemonArt/ginter2.png">
+            </div>
+        <div class="pokeTabs">
+            <div class="pokeTab">
+               <input type="checkbox" id="chck1">
+               <label class="pokeLabel" for="chck1">Which Pokémon should I pick?</label>
+               <div class="pokeContent">
+                Since you're still starting, we advise you to look for the closest professor you can find.
+                Don't worry, they're always glad to see another aspiring trainer enter into the world!
+                <br>  <img src="/pokemonArt/professorBirch.png" width="200px"> <br>
+                Professor Birch running as fast as he can as he knowing there's another potential talent!
+               </div>
+            </div>
+            <div class="pokeTab">
+               <input type="checkbox" id="chck2">
+               <label class="pokeLabel" for="chck2">Which Poké Ball should I use?</label>
+               <div class="pokeContent">
+                The one that's immediately available! 
+                 Although there are many types of Poké Balls, as a beginner you might not have the funds yet to use more specialized Poké Balls
+                so we advise you to whittle down that wild Pokémon's health point to the lowest you can and use your good ol' Poké Ball. 
+                <br>    
+                <img src="/pokemonArt/Steven.gif" width="250px">
+               </div>
+            </div>
+            <div class="pokeTab">
+                <input type="checkbox" id="chck3">
+                <label class="pokeLabel" for="chck3">How can I get better?</label>
+                <div class="pokeContent">
+                There are many ways to make you and your Pokémon team stronger such as fighting wild Pokémon, leaving them in the daycare center, and ultimately
+                by challenging others to a Poké Battle!
+                <img src="/pokemonArt/trainer.gif" width="250px"><br>
+                As a professor once said, there's a time and place for everything so don't force others to a battle and do it in moderation!
+                </div>
+             </div>
+         </div>
+        </main>
+
+
+        <aside class="aside" id="aside">
+            <div class="asidePic">
+            <img src="pokemonArt/nessa.jpg">
+
+            <div class="asideText">
+                <ul>
+                    <li>GET DETAILED GUIDES</li>
+                    <li>AND BE AHEAD OF THE PACK</li>
+                    <li><a href="/index.html#aside"><button  class="asideBtn">TRY FOR FREE!</button></a></li>
+                </ul>
+            </div>
+            </div>
+
+         
+        </aside>
+
+        <footer class="footer" id="footer1"> 
+            <ul>
+                <li><a href="https://www.facebook.com/TwentyThreeTeiji/"><img src="/images/facebook.svg" width:40px;></a></li>
+                <li><a href="https://github.com/TJ0023"><img src="/images/github.svg" width:40px;></a></li>
+            </ul>
+        </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/accordion.js"></script>
+</body>
+</html>

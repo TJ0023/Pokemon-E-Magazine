@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUIDES</title>
+    <link rel="stylesheet" href="/css/abousUS.css">
+    <link rel="icon" href="pokemonArt/webPokeball.ico" type="image/gif" sizes="16x16">
+</head>
+<body>
+
+    <header class="header" id="header1">
+        <div class="header-icon">   
+            <label class="header-logo"></label>
+        </div>
+        <div class="header-title size">
+        <h1>PokéStar!</h1>
+        </div>
+
+    <!-- Sliding Nav Menu-->
+        <div class="container" id="menu">
+    
+            <div class="slideHeader">
+                <nav class="slideNav">
+                    <label class="slideMenu" onclick="openSlide()"></label>
+                </nav>
+            
+                    <div class="slide-nav" id="slide-menu">
+                        <label class="slideClosebtn"  onclick="closeSlide()"></label>
+                        <a href="index.html">HOME</a>
+                        <a href="guides.html">GUIDES</a>
+                        <a href="trainers.html">TRAINERS</a>
+                        <a href="aboutUs.html">ABOUT US</a>
+                        <div class="slideToggle">
+                        <input type="checkbox" name="pokeBar" id="check" value="">
+                        <label class="togglebar" for="check" onclick="toggle()"></label>
+                        </div>
+        </div>
+    
+        </header>
+       
+        <main class="main" id="main">
+            <div class="mainPic">
+                <h1>ABOUT US</h1>
+                <hr> <h2>OUR STORY</h2>
+                <img src="/pokemonArt/fatPikachu.png" onclick="playPikachu()" class="pikachu">
+                <div class="mainText">
+                    PokéStar was at first just a fleeting idea for a project but soon turned
+                    into a more sincere and earnest concrete plan by its creator after realizing 
+                    it can be done with a little bit of hard work and effort!
+                </div>
+
+                <div class="mainText2">
+                  <img src="/pokemonArt/maildelivery.jpg">
+                    <div class="subText">
+                        <span class="typewrite"></span>
+                     </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer" id="footer1"> 
+            <ul>
+                <li><a href="https://www.facebook.com/TwentyThreeTeiji/"><img src="/images/facebook.svg" width:40px;></a></li>
+                <li><a href="https://github.com/TJ0023"><img src="/images/github.svg" width:40px;></a></li>
+            </ul>
+        </footer>
+
+        <!--Pikachu Cry -->
+        <audio id="pikachuCry">
+            <source src="/pokemonCries/pikachu.ogg" type="audio/ogg" id="pikachuCry">
+        </audio>
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <script>
+            var typed = new Typed(".typewrite", {
+                strings: ["HELLO", "THANK YOU FOR VISITING", "AND HAVE A GOOD DAY!"], 
+                smartBackspace: true,
+                startDelay: 3000,
+                typeSpeed: 30, 
+                backDelay: 4000,
+                showCursor: true,
+                loop: true,
+            })
+        </script>    
+
+    <script src="/js/pokemonCries.js"></script>
+</body>
+</html>

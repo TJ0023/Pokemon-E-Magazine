@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAINERS</title>
+    <link rel="stylesheet" href="/css/trainer.css">
+    <link rel="icon" href="pokemonArt/webPokeball.ico" type="image/gif" sizes="16x16">
+</head>
+<body>
+
+    <!-- Right Side Sticky Page Navigation Menu-->
+    <nav class="pokeNavHead">
+
+        <input type="checkbox" href="#" class="pokeNav" name="pokeNav" id="pokeNav"/>
+        <label class="pokeNavbutton" for="pokeNav" id="pokeNavbutton">
+        </label>
+
+        <a href="#announcement" class="pokeNavItem icon1" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem1"></a>
+        <a href="#article" class="pokeNavItem2 icon2" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem2"></a>
+        <a href="#aside" class="pokeNavItem3 icon3" id="pokeNavItem"><img src="images/pokeballpx.png" id="pokeNavItem3"></a>
+
+       </nav>
+    <!-- Right Side Sticky Page Navigation Menu-->
+
+    <header class="header" id="header1">
+        <div class="header-icon">   
+            <label class="header-logo"></label>
+        </div>
+        <div class="header-title size">
+        <h1>PokéStar!</h1>
+        </div>
+
+    <!-- Sliding Nav Menu-->
+        <div class="container" id="menu">
+    
+            <div class="slideHeader">
+                <nav class="slideNav">
+                    <label class="slideMenu" onclick="openSlide()"></label>
+                </nav>
+            
+                    <div class="slide-nav" id="slide-menu">
+                        <label class="slideClosebtn"  onclick="closeSlide()"></label>
+                        <a href="index.html">HOME</a>
+                        <a href="guides.html">GUIDES</a>
+                        <a href="trainers.html">TRAINERS</a>
+                        <a href="aboutUs.html">ABOUT US</a>
+                        <div class="slideToggle">
+                        <input type="checkbox" name="pokeBar" id="check" value="">
+                        <label class="togglebar" for="check" onclick="toggle()"></label>
+                        </div>
+        </div>
+    
+        </header>
+       
+        <div class="announcement" id="announcement">
+            <img src="/pokemonArt/t-PokeHappy.png">
+            <h1>PokéStars of the Month</h1>
+        </div>
+        <main class="main" id="main">
+            <div class="trainerBoxGradient">
+             <div class="trainerBox">
+                <input type="checkbox" id="trainerCheck">
+                <label class="mudkip" for="trainerCheck" id="trainer1"></label>
+                <ul>
+                    <li><h1>Cynthia</h1></li>
+                    <li></li>
+                    <li><h2>Pokémon</h2></li>
+                </ul>
+                <div class="pokemonList">
+                        <label class="pokemonSprite milotic" onclick="playMilotic()"></label>
+                        <label class="pokemonSprite garchomp" onclick="playGarchomp()"></label>                    
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            <div class="trainerBoxGradient2">
+                <div class="trainerBox">
+                   <input type="checkbox" id="trainerCheck2">
+                   <label class="mudkip" for="trainerCheck2" id="trainer2"></label>
+                   <ul>
+                       <li><h1>N</h1></li>
+                       <li></li>
+                       <li><h2>Pokémon</h2></li>
+                   </ul>
+                   <div class="pokemonList">
+                           <label class="pokemonSprite reshiram" onclick="playReshiram()"></label>
+                           <label class="pokemonSprite vanilluxe" onclick="playVanilluxe()"></label>                    
+                       </ul>
+                   </div>
+               </div>
+               </div>
+
+               <div class="trainerBoxGradient3">
+                <div class="trainerBox">
+                   <input type="checkbox" id="trainerCheck3">
+                   <label class="mudkip" for="trainerCheck3" id="trainer3"></label>
+                   <ul>
+                       <li><h1>Brock</h1></li>
+                       <li></li>
+                       <li><h2>Pokémon</h2></li>
+                   </ul>
+                   <div class="pokemonList">
+                           <label class="pokemonSprite tyranitar" onclick="playTyranitar()"></label>
+                           <label class="pokemonSprite steelix" onclick="playSteelix()"></label>                    
+                       </ul>
+                   </div>
+               </div>
+               </div>
+
+
+        </main>
+
+
+        <article class="article" id="article">
+            <div class="articlePic">
+                <ul class="promoText">
+                    <li><h1>CAN WE MEET THEM?</h1></li>
+                    <li><h2>ABOSLUTELY! MEET, LEARN, AND BATTLE WITH FELLOW PokéStars</h2></li>
+                    <li><h2>TO HONE YOUR SKILLS TOO!</h2></li>
+                    <li><h5>NOTE: PokéStar MEETS only happen 4 times a year so don't miss out! </h5> </li>
+                </ul>
+                <img src="pokemonArt/Kana.png" style="width:25%; height: auto;">
+            </div>
+        </article>
+
+
+        <aside class="aside" id="aside">
+            <div class="asidePic">
+                <img src="pokemonArt/mayTreecko.jpg" style="width:35%; height: auto; border-radius: 1em;">
+                <ul class="promoText2">
+                    <li><h2>NEED ASSISTANCE?</h2></li>
+                    <li><h3>FIND FELLOW EAGER TRAINERS</h3></li>
+                    <li><h3>TO GUIDE YOU IN YOUR JOURNEY!</h3></li>
+                </ul>
+              
+            </div>
+        </aside>
+
+
+        <footer class="footer" id="footer1"> 
+            <ul>
+                <li><a href="https://www.facebook.com/TwentyThreeTeiji/"><img src="/images/facebook.svg" width:40px;></a></li>
+                <li><a href="https://github.com/TJ0023"><img src="/images/github.svg" width:40px;></a></li>
+            </ul>
+        </footer>
+
+
+
+        <!--Pokemon Cries -->
+        <audio id="pikachuCry">
+            <source src="/pokemonCries/pikachu.ogg" type="audio/ogg" id="pikachuCry">
+        </audio>
+    
+        <audio id="charizardCry">
+            <source src="/pokemonCries/charizard-mega-y.ogg" type="audio/ogg" id="charizardCry">
+        </audio>
+        
+        <audio id="garchompCry">
+            <source src="/pokemonCries/garchomp.ogg" type="audio/ogg" id="garchompCry">
+        </audio>
+        
+        <audio id="miloticCry">
+            <source src="/pokemonCries/milotic.ogg" type="audio/ogg" id="miloticCry">
+        </audio>
+
+        <audio id="reshiramCry">
+            <source src="/pokemonCries/reshiram.ogg" type="audio/ogg" id="reshiramCry">
+        </audio>
+
+        <audio id="vanilluxeCry">
+            <source src="/pokemonCries/vanilluxe.ogg" type="audio/ogg" id="vanilluxeCry">
+        </audio>
+
+        <audio id="tyranitarCry">
+            <source src="/pokemonCries/tyranitar.ogg" type="audio/ogg" id="tyranitarCry">
+        </audio>
+
+        <audio id="steelixCry">
+            <source src="/pokemonCries/steelix.ogg" type="audio/ogg" id="steelixCry">
+        </audio>
+
+        <script src="/js/index.js"></script>
+        <script src="/js/pokemonCries.js"></script>
+
+</body>
+</html>
